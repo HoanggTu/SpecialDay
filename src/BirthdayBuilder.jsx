@@ -266,10 +266,10 @@ function ControlPanel({ slides, setSlides, celebrant, setCelebrant, theme, setTh
       {/* Chung */}
       <div className="bg-white rounded-2xl p-4 shadow border border-neutral-200 text-black">
         <h3 className="font-semibold text-lg mb-3 flex items-center gap-2 text-pink-600">
-          <Sparkles size={18} /> Cấu hình chung
+          <Sparkles size={18} /> Form thông tin này chỉ cần điền tên thoii
         </h3>
 
-        <label className="block text-sm font-medium mb-1">Tên người được chúc</label>
+        <label className="block text-sm font-medium mb-1">Nhớ điền Tên nhé</label>
         <input
           value={celebrant}
           onChange={(e) => setCelebrant(e.target.value)}
@@ -688,7 +688,7 @@ export default function BirthdayBuilderApp() {
 
         <footer className="mt-6 text-sm text-neutral-500">
           Lưu ý: chỉ cần điền tên và bấm trình chiếu là được. Các thiết lập khác có thể bỏ trống và để mặc định. <br />
-                                                             Sinh nhật vui vẻ nhé, hẹn gặp lại.
+                                                             Sinh nhật vui vẻ nhen, hẹn gặp lại.
         </footer>
       </div>
 
