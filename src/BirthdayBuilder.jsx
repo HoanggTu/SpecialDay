@@ -33,7 +33,7 @@ const Balloons = ({ count = 10 }) => {
     </div>
   );
 };
-
+t
 const Confetti = ({ fire }) => {
   const firedRef = useRef(false);
   useEffect(() => {
@@ -263,7 +263,7 @@ function ControlPanel({ slides, setSlides, celebrant, setCelebrant, theme, setTh
       </div>
 
       <div className="bg-white rounded-2xl p-5 sm:p-6 shadow border border-neutral-200">
-        <h3 className="font-semibold text-base sm:text-lg mb-2">Danh sách slide</h3>
+        <h3 className="font-semibold text-base sm:text-lg mb-2">Custom slide</h3>
 
         <div className="space-y-2">
           {slides.map((s,i)=>(
@@ -305,13 +305,13 @@ function Player({ slides, celebrant, theme, audio, onExit }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const ref = useRef(null);
-
+  const isLast = index === slides.length - 1; 
   useEffect(()=>{ ref.current?.requestFullscreen?.().catch(()=>{}); },[]);
   useEffect(()=>{
     const key = (e)=>{ if(e.key===" "||e.key==="ArrowRight") next(); if(e.key==="ArrowLeft") prev(); if(e.key==="Escape") onExit(); if(e.key.toLowerCase()==="p") setPaused(p=>!p); };
     window.addEventListener("keydown",key); return ()=>window.removeEventListener("keydown",key);
   },[onExit]);
-  useEffect(()=>{ if(paused) return; const t=setTimeout(()=>next(), (slides[index]?.duration||5)*1000); return ()=>clearTimeout(t); },[index,paused,slides]);
+  useEffect(()=>{ if(paused) return; const t=setTimeout(()=>next(), (slides[index]?.duration||12)*1000); return ()=>clearTimeout(t); },[index,paused,slides]);
 
   const next=()=>setIndex(i=> (i+1<slides.length ? i+1 : (onExit(), i)));
   const prev=()=>setIndex(i=> Math.max(0, i-1));
@@ -382,7 +382,7 @@ export default function BirthdayBuilderApp() {
       {/* Form (full-width block dưới) */}
       <section className="w-full px-4 sm:px-6 lg:px-8 pb-10">
         <ControlPanel slides={slides} setSlides={setSlides} celebrant={celebrant} setCelebrant={setCelebrant} theme={theme} setTheme={setTheme} audio={audio} setAudio={setAudio}/>
-        <p className="mt-6 text-sm text-neutral-500">Gợi ý: thêm slide “Outro” và bật Confetti để có hiệu ứng pháo giấy khi kết thúc.</p>
+        <p className="mt-6 text-sm text-neutral-500">Sinh nhật vui vẻ nhen, hẹn gặp lại.</p>
       </section>
 
       {present && <Player slides={slides} celebrant={celebrant} theme={theme} audio={audio} onExit={()=>setPresent(false)}/>}
