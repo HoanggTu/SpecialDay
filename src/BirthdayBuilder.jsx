@@ -605,9 +605,19 @@ function Player({ slides, celebrant, theme, audio, onExit }) {
 
       <div className="absolute inset-0">
         {curSlide ? (
-          <AnimatePresence mode="wait">
-            <Slide key={curSlide.id} slide={curSlide} celebrant={celebrant} theme={theme} />
-          </AnimatePresence>
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+            key={`${slides[index]?.id}-${index}`}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45 }}
+            >
+            <Slide slide={slides[index]} celebrant={celebrant} theme={theme} />
+            </motion.div>
+        </AnimatePresence>
+
         ) : (
           (() => {
             setTimeout(onExit, 0);
