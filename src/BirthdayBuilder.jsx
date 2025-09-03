@@ -105,7 +105,9 @@ const effects = {
 const starterSlides = [
   { id: uid(), type: "title", title: "Happy Birthday!", subtitle: "Chúc mừng sinh nhật 🎉", bg: "gradient-candy", duration: 5, transition: "fade", effect: "bounce", balloons: true },
   { id: uid(), type: "message", text: "Chúc bạn tuổi mới luôn vui vẻ, nhiều sức khỏe và đạt mọi ước mơ!", duration: 7, transition: "slide-left", effect: "fade-up" },
-  { id: uid(), type: "image", imageUrl: "https://images.unsplash.com/photo-1603574670812-d24560880210?q=80&w=1600&auto=format&fit=crop", caption: "Make a wish ✨", duration: 7, transition: "zoom", effect: "none" },
+  { id: uid(), type: "image", imageUrl: "/Anhduynhapngt.jpeg", caption: "Ảnh duy nhất có trong máy ✨", duration: 7, transition: "zoom", effect: "none" },
+  { id: uid(), type: "image", imageUrl: "/thienanh.png", caption: "xin lỗi vì lấy chưa xin ✨", duration: 7, transition: "zoom", effect: "none" },
+  { id: uid(), type: "image", imageUrl: "/IMG_7920.png", caption: "không biết đâu ra ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "outro", title: "Have a magical day!", subtitle: "Cảm ơn đã xem 💖", duration: 6, transition: "flip", effect: "rotate-in", confetti: true },
 ];
 
@@ -209,7 +211,7 @@ function ControlPanel({ slides, setSlides, celebrant, setCelebrant, theme, setTh
   const addSlide = (type) => {
     const base = { id: uid(), type, duration: 6, transition: "fade", effect: "none" };
     const presets = {
-      title: { title: "Happy Birthday!", subtitle: "Chúc mừng sinh nhật 🎉", bg: theme.background, balloons: true },
+      title: { title: "Happy Birthday!", subtitle: "🎉 🎉 🎉 🎉 🎉 🎉 🎉", bg: theme.background, balloons: true },
       message: { text: "Chúc bạn tuổi mới thật tuyệt!" },
       image: { imageUrl: "", caption: "" },
       video: { videoUrl: "", caption: "" },
