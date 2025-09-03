@@ -222,7 +222,7 @@ function ControlPanel({ slides, setSlides, celebrant, setCelebrant, theme, setTh
       message: { text: "Chúc bạn tuổi mới thật tuyệt!" },
       image: { imageUrl: "", caption: "" },
       video: { videoUrl: "", caption: "" },
-      outro: { title: "Have a magical day!", subtitle: "Cảm ơn đã xem 💖", confetti: true },
+      outro: { title: "Have a magical day!", subtitle: "Cảm ơn đã xem 💖", balloons: true, confetti: true },
     };
     setSlides([...slides, { ...base, ...(presets[type] || {}) }]);
     setSelectedId(base.id);
