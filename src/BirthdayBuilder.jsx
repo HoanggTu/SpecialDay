@@ -108,13 +108,13 @@ const starterSlides = [
     id: uid(),
     type: "message",
     text: "Chúc mừng sinh nhật🎉.\nChúc em một tuổi mới dồi dào sức khỏe để học tập và theo đuổi những điều mình yêu thích.\nMong em sẽ luôn giữ được sự sáng suốt và nhiệt huyết trên con đường mình đã chọn, để mọi nỗ lực đều mang lại kết quả ngọt ngào.\nSinh nhật vui vẻ nhé và hẹn gặp lại.",
-    duration: 12,
+    duration: 15,
     transition: "slide-left",
     effect: "fade-up"
     },  
   { id: uid(), type: "image", imageUrl: "/Anhduynhat.jpeg", caption: "Ảnh duy nhất có trong máy ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "image", imageUrl: "/thienanh.png", caption: "xin lỗi vì lấy chưa xin ✨", duration: 7, transition: "zoom", effect: "none" },
-  { id: uid(), type: "image", imageUrl: "/IMG_7920.png", caption: "không biết đâu ra ✨", duration: 7, transition: "zoom", effect: "none" },
+  { id: uid(), type: "image", imageUrl: "/IMG_7920.png", caption: "không biết từ đâu ra ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "outro", title: "Have a nice day bro!", subtitle: "Hẹn gặp lại 💖", duration: 7, transition: "flip", effect: "rotate-in", confetti: true },
 ];
 
