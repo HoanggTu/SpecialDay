@@ -104,8 +104,15 @@ const effects = {
 ============================= */
 const starterSlides = [
   { id: uid(), type: "title", title: "Happy Birthday!", subtitle: "Chúc mừng sinh nhật 🎉", bg: "gradient-candy", duration: 5, transition: "fade", effect: "bounce", balloons: true },
-  { id: uid(), type: "message", text: "Chúc bạn tuổi mới luôn vui vẻ, nhiều sức khỏe và đạt mọi ước mơ!", duration: 7, transition: "slide-left", effect: "fade-up" },
-  { id: uid(), type: "image", imageUrl: "/Anhduynhapngt.jpeg", caption: "Ảnh duy nhất có trong máy ✨", duration: 7, transition: "zoom", effect: "none" },
+    {
+    id: uid(),
+    type: "message",
+    text: "Chúc mừng sinh nhật.\nChúc em một tuổi mới dồi dào sức khỏe để học tập và theo đuổi những điều mình yêu thích.\nMong em sẽ luôn giữ được sự sáng suốt và nhiệt huyết trên con đường mình đã chọn, để mọi nỗ lực đều mang lại kết quả ngọt ngào.\nSinh nhật vui vẻ nhé và hẹn gặp lại.",
+    duration: 7,
+    transition: "slide-left",
+    effect: "fade-up"
+    },  
+  { id: uid(), type: "image", imageUrl: "/Anhduynhat.jpeg", caption: "Ảnh duy nhất có trong máy ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "image", imageUrl: "/thienanh.png", caption: "xin lỗi vì lấy chưa xin ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "image", imageUrl: "/IMG_7920.png", caption: "không biết đâu ra ✨", duration: 7, transition: "zoom", effect: "none" },
   { id: uid(), type: "outro", title: "Have a magical day!", subtitle: "Cảm ơn đã xem 💖", duration: 6, transition: "flip", effect: "rotate-in", confetti: true },
@@ -159,7 +166,7 @@ const Slide = ({ slide, celebrant, theme }) => {
         {slide.type === "message" && (
           <motion.div initial={e.initial} animate={e.animate} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">{celebrant ? `Dear ${celebrant},` : "Lời chúc"}</h2>
-            <p className="text-xl md:text-2xl leading-relaxed">{slide.text}</p>
+            <p className="whitespace-pre-line text-xl md:text-2xl leading-relaxed">{slide.text}</p>
           </motion.div>
         )}
         {slide.type === "image" && (
