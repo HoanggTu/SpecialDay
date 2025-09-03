@@ -103,7 +103,7 @@ const effects = {
    Starter slides
 ============================= */
 const starterSlides = [
-  { id: uid(), type: "title", title: "Happy Birthday!", subtitle: "🎉 🎉 🎉 🎉", bg: "gradient-candy", duration: 5, transition: "fade", effect: "bounce", balloons: true },
+  { id: uid(), type: "title", title: "Happy Birthday!", subtitle: "🎉 chú ý âm lượng 🎉", bg: "gradient-candy", duration: 7, transition: "fade", effect: "bounce", balloons: true },
     {
     id: uid(),
     type: "message",
@@ -674,7 +674,7 @@ export default function BirthdayBuilderApp() {
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => setPresent(true)} className="px-4 py-2 rounded-2xl bg-indigo-600 text-white flex items-center gap-2 shadow">
-              <Play size={18} /> Trình chiếu
+              <Play size={18} /> Điền tên rùi thì nhấn vô đây 
             </button>
             <a href="https://fonts.google.com/specimen/Poppins" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-2xl bg-white text-neutral-800 shadow">
               Font gợi ý
